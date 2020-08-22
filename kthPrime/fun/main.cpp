@@ -9,6 +9,6 @@ int main(int argc, char *argv[]) {
     int x;
     if (!(ss >> x))
         cerr << "Invalid number " << argv[1] << '\n';
-    unsigned long long ans = kthPrime(x);
-    cout << x << "th prime is " << ans << endl;
+    vector<unsigned long long>* ans = genPrimes(x);
+    cout << x << "th prime is " << ans->back() << endl;
 }

@@ -1,4 +1,4 @@
-#ifndef FINDPRIMESH
+##ifndef FINDPRIMESH
 #define FINDPRIMESH
 
 #include <vector>

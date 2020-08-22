@@ -11,18 +11,14 @@ unsigned long long nextPrime(vector<unsigned long long>*& primes, vector<unsigne
     }
     return query;
 }
-unsigned long long kthPrime(int k){
-    int count =  1;
-    unsigned long long kth = 2;
+vector<unsigned long long>* genPrimes(int M){
     vector<unsigned long long>* primes = new vector<unsigned long long>;
-    primes->push_back(kth);
-    kth = 1;
+    primes->push_back(1);
+    int kth = 1;
     vector<unsigned long long>::iterator it;
-    while(count < k){
+    while(kth < M){
         kth = nextPrime(primes, it, kth+2);
         primes->push_back(kth);
-        count ++;
     }
-    delete primes;
-    return kth;
+    return primes;
 }
